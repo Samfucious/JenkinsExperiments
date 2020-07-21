@@ -9,7 +9,7 @@ pipeline {
 					echo "first step script"
 				}
 			}
-		},
+		}
 		
 		stage ("fibonacci") {
 			echo "fibonacci step"
@@ -21,7 +21,7 @@ pipeline {
 				}
 			}
 			
-		},
+		}
 		stage ("last step"){
 			steps {
 				echo "last step"
