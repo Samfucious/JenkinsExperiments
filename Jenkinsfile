@@ -1,11 +1,10 @@
-import hudson.model.*
-
-def out = getBinding().out;
+println "Task start"
 
 pipeline {
 	agent any
 
 	stages {
+		println "Fibonacci start"
 		stage ("fibonacci") {
 			steps {
 				script {
@@ -13,8 +12,11 @@ pipeline {
 				}
 			}
 		}
+		println "Fibonacci end"
 	}
 }
+
+println "Task end"
 
 def fibonacci(target) {
 	def a = 1
