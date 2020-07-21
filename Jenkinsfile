@@ -34,10 +34,10 @@ def fibonacci(target) {
 	def a = 1
 	def b = 1
 
-	print "" + a
+	println a
 	
 	while (b < target) {
-		print ", " + b
+		println b
 		def t = b
 		b = a + b
 		a = t
