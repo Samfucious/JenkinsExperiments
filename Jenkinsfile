@@ -1,3 +1,5 @@
+def out = getBinding().out;
+
 pipeline {
 	agent any
 
@@ -16,10 +18,10 @@ def fibonacci(target) {
 	def a = 1
 	def b = 1
 
-	println(a)
+	out.println(a)
 	
 	while (b < target) {
-		println(b)
+		out.println(b)
 		def t = b
 		b = a + b
 		a = t
