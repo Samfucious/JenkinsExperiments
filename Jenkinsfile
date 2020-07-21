@@ -1,22 +1,22 @@
-println "Task start"
-
 pipeline {
 	agent any
 
 	stages {
-		println "Fibonacci start"
+		
 		stage ("fibonacci") {
+			
 			steps {
 				script {
+					echo "Fibonacci start"
 					fibonacci(100)
+					echo "Fibonacci end"
 				}
 			}
+			
 		}
-		println "Fibonacci end"
+		
 	}
 }
-
-println "Task end"
 
 def fibonacci(target) {
 	def a = 1
