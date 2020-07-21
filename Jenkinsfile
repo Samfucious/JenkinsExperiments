@@ -4,9 +4,8 @@ pipeline {
 	stages {
 		stage ("first step"){
 			steps {
-				echo "first step"
 				script {
-					echo "first step script"
+					println "first step script"
 				}
 			}
 		}
@@ -15,18 +14,17 @@ pipeline {
 			echo "fibonacci step"
 			steps {
 				script {
-					echo "Fibonacci start"
+					println "Fibonacci start"
 					fibonacci(100)
-					echo "Fibonacci end"
+					println "Fibonacci end"
 				}
 			}
 			
 		}
 		stage ("last step"){
 			steps {
-				echo "last step"
 				script {
-					echo "last step"
+					println "last step"
 				}
 			}
 		}
