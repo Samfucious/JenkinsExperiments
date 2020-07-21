@@ -11,7 +11,6 @@ pipeline {
 		}
 		
 		stage ("fibonacci") {
-			echo "fibonacci step"
 			steps {
 				script {
 					println "Fibonacci start"
@@ -35,7 +34,7 @@ def fibonacci(target) {
 	def a = 1
 	def b = 1
 
-	echo "" + a
+	print "" + a
 	
 	while (b < target) {
 		print ", " + b
