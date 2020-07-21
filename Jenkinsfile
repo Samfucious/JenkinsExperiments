@@ -1,3 +1,5 @@
+import hudson.model.*
+
 def out = getBinding().out;
 
 pipeline {
