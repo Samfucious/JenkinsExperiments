@@ -20,10 +20,10 @@ def fibonacci(target) {
 	def a = 1
 	def b = 1
 
-	out.println(a)
+	print "" + a
 	
 	while (b < target) {
-		out.println(b)
+		print ", " + b
 		def t = b
 		b = a + b
 		a = t
