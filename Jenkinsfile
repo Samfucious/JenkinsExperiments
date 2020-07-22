@@ -3,6 +3,7 @@ pipeline {
     
     parameters {
         string(name: 'message', defaultValue: 'Hello, World!', description: 'Message to display')
+        stirng(name: 'function', defaultValue: 'fibonacci', description: 'Name of function to execute')
     }
 
     stages {
@@ -16,6 +17,15 @@ pipeline {
             steps {
                 script {
                     println "${params.message}"
+                }
+            }
+    	}
+
+    	stage ("execute") {
+            steps {
+                script {
+                    def func = load "${params.function}.groovy"
+					func.pipeline()
                 }
             }
     	}
