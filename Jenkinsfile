@@ -24,8 +24,8 @@ pipeline {
     	stage ("execute") {
             steps {
                 script {
-                    def func = load "/functions/${params.function}.groovy"
-		    func.pipeline()
+                    def func = load "${rootDir}/functions/${params.function}.groovy"
+		            func.pipeline()
                 }
             }
     	}
