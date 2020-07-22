@@ -11,9 +11,11 @@ pipeline {
     	}
 
     	stage ("echo") {
-    		script {
-    			echo "${params.message}"
-    		}
+            steps {
+                script {
+                    echo "${params.message}"
+                }
+            }
     	}
 
     	stage ("end") {
