@@ -1,7 +1,6 @@
-def fibonacci() {
+def fibonacci(target) {
 	println "Fibonacci start"
-	
-	def target = 100
+
 	def a = 1
 	def b = 1
 
@@ -15,6 +14,10 @@ def fibonacci() {
 	}
 	
 	println "Fibonacci end"
+}
+
+def fibonacci() {
+	fibonacci(100)
 }
 
 return this
