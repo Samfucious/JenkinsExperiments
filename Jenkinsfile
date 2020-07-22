@@ -7,19 +7,23 @@ pipeline {
 
     stages {
     	stage ("start") {
-
+            steps {
+                println "start"
+            }
     	}
 
     	stage ("echo") {
             steps {
                 script {
-                    echo "${params.message}"
+                    println "${params.message}"
                 }
             }
     	}
 
     	stage ("end") {
-
+            steps {
+                println "end"
+            }
     	}
     }
 }
