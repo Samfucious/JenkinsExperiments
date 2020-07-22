@@ -26,7 +26,7 @@ pipeline {
             steps {
                 script {
                     def functions = load "functions/${params.sourcefile}.groovy"
-                    functions.${params.function}()
+                    functions.{params.function}()
                 }
             }
     	}
