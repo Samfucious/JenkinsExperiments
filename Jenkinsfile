@@ -3,7 +3,7 @@ pipeline {
     
     parameters {
         string(name: 'message', defaultValue: 'Hello, World!', description: 'Message to display')
-        stirng(name: 'function', defaultValue: 'fibonacci', description: 'Name of function to execute')
+        string(name: 'function', defaultValue: 'fibonacci', description: 'Name of function to execute')
     }
 
     stages {
