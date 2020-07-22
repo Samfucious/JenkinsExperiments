@@ -1,4 +1,6 @@
 pipeline {
+    agent any
+    
     parameters {
         string(name: 'message', defaultValue: 'Hello, World!', description: 'Message to display')
     }
