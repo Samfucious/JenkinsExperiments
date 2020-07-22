@@ -3,6 +3,7 @@ pipeline {
     
     parameters {
         string(name: 'message', defaultValue: 'Hello, World!', description: 'Message to display')
+        string(name: 'sourcefile', defaultValue: 'functions', description: 'File to load with target groovy (minus extension)')
         string(name: 'function', defaultValue: 'fibonacci', description: 'Name of function to execute')
     }
 
@@ -24,8 +25,8 @@ pipeline {
     	stage ("execute") {
             steps {
                 script {
-                    def functions = load "functions/${params.function}.groovy"
-                    functions.fibonacci()
+                    def functions = load "functions/${params.sourcefile}.groovy"
+                    functions.${params.function}()
                 }
             }
     	}
