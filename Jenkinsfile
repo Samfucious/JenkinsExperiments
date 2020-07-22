@@ -24,8 +24,9 @@ pipeline {
     	stage ("execute") {
             steps {
                 script {
-                    def func = load "functions/${params.function}.groovy"
-		            func.pipeline()
+                    def functions = load "${pwd}/functions/${params.function}.groovy"
+                    functions.fibonacci()
+		            
                 }
             }
     	}
