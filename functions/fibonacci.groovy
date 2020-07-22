@@ -20,7 +20,7 @@ def fibonacci() {
 					script {
 						println "Fibonacci start"
 						
-						def target = ${params.target}
+						def target = 100
 						def a = 1
 						def b = 1
 
